@@ -8,22 +8,15 @@ import Cart from './components/Cart';
 import ProductsContainer from './containers/ProductsContainer';
 import CartContainer from './containers/CartContainer';
 import MessageContainer from './containers/MessageContainer';
+import Layout from './components/Layout';
+import {BrowserRouter ,Route} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header/>
-
-        <main id="mainContainer">
-          <div className="container">
-            <ProductsContainer/>
-            <MessageContainer/>
-            <CartContainer/>
-          </div>
-        </main>
-
-        <Footer/>
-      </div>
+      <BrowserRouter>
+      	<Layout/>
+      </BrowserRouter>	
+      
     );
   }
 }

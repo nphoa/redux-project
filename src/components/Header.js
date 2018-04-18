@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
-
+import {  Link } from "react-router-dom";
 
 class Header extends Component {
+ 
   render() {
     return (
         
@@ -50,6 +50,12 @@ class Header extends Component {
               <li>
                 <ul className="collapsible collapsible-accordion">
                   <li>
+                    <Link to ="/" className="collapsible-header waves-effect arrow-r">
+                      <i className="fa fa-dashboard" /> Homepages
+                    </Link>
+                    
+                  </li>
+                  <li>
                     <a className="collapsible-header waves-effect arrow-r">
                       <i className="fa fa-shopping-bag" /> Product Page
                       <i className="fa fa-angle-down rotate-icon" />
@@ -76,7 +82,8 @@ class Header extends Component {
                     <div className="collapsible-body">
                       <ul>
                         <li>
-                          <a href="cart.html" className="waves-effect">Page with shopping cart</a>
+                          <Link to="/cart" className="waves-effect">Page with shopping cart</Link>
+                          
                         </li>
                         <li>
                           <a href="contact.html" className="waves-effect">Page with contact form</a>
@@ -96,34 +103,7 @@ class Header extends Component {
                       </ul>
                     </div>
                   </li>
-                  <li>
-                    <a className="collapsible-header waves-effect arrow-r">
-                      <i className="fa fa-dashboard" /> Homepages
-                      <i className="fa fa-angle-down rotate-icon" />
-                    </a>
-                    <div className="collapsible-body">
-                      <ul>
-                        <li>
-                          <a href="home-page.html" className="waves-effect">Ecommerce homepage default</a>
-                        </li>
-                        <li>
-                          <a href="home-page-2.html" className="waves-effect">Ecommerce homepage full width</a>
-                        </li>
-                        <li>
-                          <a href="home-page-3-carousel.html" className="waves-effect">Ecommerce homepage V.3 Carousel</a>
-                        </li>
-                        <li>
-                          <a href="home-page-3-full-page-carousel.html" className="waves-effect">Ecommerce homepage V.3 Full Page Carousel</a>
-                        </li>
-                        <li>
-                          <a href="home-page-3-half-page-carousel.html" className="waves-effect">Ecommerce homepage V.3 Half Page Carousel</a>
-                        </li>
-                        <li>
-                          <a href="home-page-4.html" className="waves-effect">Ecommerce homepage V.4</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+                  
                   <li>
                     <a className="collapsible-header waves-effect arrow-r">
                       <i className="fa fa-desktop" /> Post Pages
@@ -151,26 +131,15 @@ class Header extends Component {
                   </li>
                   <li>
                     <a className="collapsible-header waves-effect arrow-r">
-                      <i className="fa fa-diamond" /> Category Pages
+                      <i className="fa fa-diamond" /> Learning React JS
                       <i className="fa fa-angle-down rotate-icon" />
                     </a>
                     <div className="collapsible-body">
                       <ul>
                         <li>
-                          <a href="category-list-left-column.html" className="waves-effect">Category list with left column</a>
+                          <Link to="/tranning" href="category-list-left-column.html" className="waves-effect">Router</Link>
                         </li>
-                        <li>
-                          <a href="category-list-right-column.html" className="waves-effect">Category list with right column</a>
-                        </li>
-                        <li>
-                          <a href="category-grid-left-column.html" className="waves-effect">Category grid with left column</a>
-                        </li>
-                        <li>
-                          <a href="category-right-column.html" className="waves-effect">Category grid with right column</a>
-                        </li>
-                        <li>
-                          <a href="category-grid-left-column-carousel.html" className="waves-effect">Category grid with left column carousel</a>
-                        </li>
+                       
                       </ul>
                     </div>
                   </li>
@@ -186,7 +155,7 @@ class Header extends Component {
             </ul>
             <nav className="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar double-nav">
               <div className="float-left">
-                <a data-activates="slide-out" className="button-collapse">
+                <a data-activates="slide-out" className="button-collapse" id="test">
                   <i className="fa fa-bars" />
                 </a>
               </div>
@@ -216,4 +185,5 @@ class Header extends Component {
   }
 }
 
+    
 export default Header;
