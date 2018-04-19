@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 import routes from '../routes';
+import ProductDetailPage from '../Page/ProductDetailPage';
+import ProductPage from '../Page/ProductPage';
 class Layout extends Component {
   showContentRoute = (routes) =>{
     var result = null;
@@ -21,7 +23,7 @@ class Layout extends Component {
             );
         });
     }
-    console.log(result);
+ 
     return result;
   }
   render() {

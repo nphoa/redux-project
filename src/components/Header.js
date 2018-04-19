@@ -63,14 +63,9 @@ class Header extends Component {
                     <div className="collapsible-body">
                       <ul>
                         <li>
-                          <a href="product.html" className="waves-effect">Product Page V.1</a>
+                          <Link to="/danhsachsanpham"  className="waves-effect">Product</Link>
                         </li>
-                        <li>
-                          <a href="product-page.html" className="waves-effect">Product Page V.2</a>
-                        </li>
-                        <li>
-                          <a href="product-page-4.html" className="waves-effect">Product Page V.3</a>
-                        </li>
+                       
                       </ul>
                     </div>
                   </li>
@@ -139,7 +134,12 @@ class Header extends Component {
                         <li>
                           <Link to="/tranning" href="category-list-left-column.html" className="waves-effect">Router</Link>
                         </li>
-                       
+                       <li>
+                          <Link to="/products" href="category-list-left-column.html" className="waves-effect">Products</Link>
+                        </li>
+                        <li>
+                          <Link to="/login" href="category-list-left-column.html" className="waves-effect">Login</Link>
+                        </li>
                       </ul>
                     </div>
                   </li>
