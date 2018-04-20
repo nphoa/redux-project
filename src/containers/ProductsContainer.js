@@ -4,7 +4,18 @@ import Products from '../components/Products';
 import Product from '../components/Product';
 import PropTypes from 'prop-types';
 import * as actions from '../actions/index';
+import callApi from '../API/apiCaller';
+import * as urls from '../API/URL';
 class ProductsContainer extends Component {
+  constructor(props){
+    super(props);
+  }
+  componentDidMount(){
+    callApi(urls.GET_ALL_PRODUCT,'GET',null).then(res=>{
+        this.props.fetchAllProduct(res.data);
+    });
+
+  }
   showProducts(products){
     var result = null;
     if(products.length > 0){
@@ -48,6 +59,9 @@ const mapDispatchToProps = (dispatch,props) => {
       },
       onChangeMessage: (message) => {
         dispatch(actions.saveMessage(message));
+      },
+      fetchAllProduct:(products)=>{
+        dispatch(actions.fetchAllProduct(products));
       }
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import C_ProductList from './C_ProductList';
-
+import {Link} from 'react-router-dom';
 
 class C_Product extends Component {
   render() {
@@ -8,8 +8,8 @@ class C_Product extends Component {
         <div className="container">
   			<div className="row">
             <div className="col-md-12">
-                <button type="button" className="btn btn-info">Thêm sản phẩm</button>
-              	<C_ProductList/>
+                <Link to="/danhsachsanpham/add"  className="btn btn-info">Thêm sản phẩm</Link>
+              	<C_ProductList products = {this.props.products}/>
 
             </div>
         </div>

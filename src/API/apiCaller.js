@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default callApi = (endpoint,method='GET',body) => {
+export default function callApi(endpoint,method='GET',body){
 	return axios({
 		method:method,
 		url:`${endpoint}`,

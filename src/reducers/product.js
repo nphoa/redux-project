@@ -40,7 +40,10 @@ var initialState  = [
 
 var myReducer = (state = initialState,action) => {
 	switch (action.type) {
-		
+		case types.FETCH_ALL_PRODUCT :
+			state = action.products;
+			return [...state];
+			break;
 		
 		default:
 			//console.log(api.getAllProduct());

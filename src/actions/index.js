@@ -28,3 +28,10 @@ export const saveMessage = (message) => {
 		message:message
 	}
 }
+
+export const fetchAllProduct = (products) => {
+	return {
+		type:types.FETCH_ALL_PRODUCT,
+		products:products
+	}
+}

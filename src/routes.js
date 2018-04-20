@@ -7,6 +7,7 @@ import ProductPage from './Page/ProductPage';
 import ProductDetailPage from './Page/ProductDetailPage';
 import LoginPage from './Page/LoginPage';
 import Products from './Page/Products';
+import AddProduct from './Page/AddProduct';
 const routes = [
 	{
 		path: '/',
@@ -42,6 +43,11 @@ const routes = [
 		path: '/danhsachsanpham',
 		exact:true,
 		main: () => <Products />	
+	},
+	{
+		path: '/danhsachsanpham/add',
+		exact:true,
+		main: () => <AddProduct />	
 	},
 	{
 		path: '',
